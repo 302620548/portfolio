@@ -1,4 +1,5 @@
 <?php
+
 $message_sent = false;
 if(isset($_POST['email']) && $_POST['email'] != ''){
 
@@ -19,6 +20,8 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
 
     }
 }
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,24 +32,24 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/contact.css" media="all">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/body.css">
-    <script src="js/contact.js"></script>
+    <link rel="stylesheet" href="../public/css/contact.css" media="all">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/body.css">
+    <script src="../Modules/contact.js"></script>
 
 </head>
   <div class="jumbotron text-center">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <a href="Home.HTML">
-                    <img class="logo" src="Pictures/profile pic.png" alt="showing Logo" width="100" height="auto">
+                <a href="../public/Home.HTML">
+                    <img class="logo" src="../public/Pictures/profile%20pic.png" alt="showing Logo" width="100" height="auto">
                 </a>
             </div>
             <div class="col-sm-6">
                 <ul class="NavLinks">
-                    <li><a href="Home.HTML">Home</a></li>
+                    <li><a href="../public/Home.HTML">Home</a></li>
                     <li><a href="projects.php">Projects</a></li>
                     <li><a href="about.HTML">About</a></li>
                     <li><a href="Contact.php">Contact</a></li>
@@ -61,13 +64,13 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
 
     <div class="container">
         <h1>Contact</h1>
-        <img src="Pictures/Gmail icon.png" alt="Mail icon" height="30px">
+        <img src="../public/Pictures/Gmail%20icon.png" alt="Mail icon" height="30px">
         <p>
             U kunt mij e-mailen op 302620548@student.rocmondriaan.nl
         </p>
     </div>
 
-  <div class="container email-container">
+  <div class="container email-container" action="includes/signup.inc,php">
       <form action="email.php" method="POST" class="form">
           <div class="form-group">
               <label for="name" class="form-label">Your Name</label>
@@ -86,7 +89,7 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
               <textarea class="form-control" rows="5" cols="50" id="message" name="message" placeholder="Bericht..." tabindex="4"></textarea>
           </div>
           <div>
-              <button type="submit" class="btn">VERZEND</button>
+              <button type="submit" class="btn" name="submit">VERZEND</button>
           </div>
       </form>
   </div>
